@@ -1,0 +1,56 @@
+
+.about-section{
+    position: absolute;
+    top: 12%;
+    left: calc(3vw + 40%);
+    margin-right: 3vw;
+    font-family: "karla";
+    line-height: 2rem;
+    font-size: 1.4rem;
+    background: none;
+    color: rgba(45, 27, 19, 0.574);
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    padding: 10px;
+    transition: 0.3s all linear;
+    user-select: none;
+}
+.about-paragraph:first-child::first-letter, .about-paragraph:nth-child(2)::first-letter{
+    text-decoration: underline 1px solid; 
+}
+.about-paragraph:nth-child(3){
+text-align: center;
+}
+@font-face {
+    font-family: "karla";
+    src: url(/src/Assets/fonts/Karla.ttf);
+}
+@media screen and (max-width: 1050px){
+    .about-section{
+        width: 90%;
+        top: calc(40% + 2vw);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: calc(1.3vw + 0.7rem);
+    }
+}
+@media screen and (max-height:650px ) and (max-width: 1050px){
+    .about-section{
+        width: 70%;
+        font-size: calc(1vh + 0.7rem);
+        top: calc(60% + 3vw);
+        background-color: rgba(128, 128, 128, 0.338);
+        color: white;
+        border: none;
+    }
+}
+@media screen and (max-height:450px ) and (max-width: 630px){
+    .about-section{
+        font-size: calc(1vh + 0.5rem);
+        background-color: rgba(128, 128, 128, 0.588);
+        width: 95%;
+        height: fit-content;
+        line-height: 1rem;
+    }
+
+}

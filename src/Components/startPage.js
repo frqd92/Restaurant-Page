@@ -1,5 +1,4 @@
 import { enterSite } from "./enterBtn";
-
 export function startPage(){
     const nav = document.querySelector("nav");
     const navOptions = document.querySelector(".nav-options");

@@ -1,3 +1,4 @@
+import "/src/styles/background.css";
 import layerClouds from "/src/Assets/images/layer-clouds.png";
 import layerForest from "/src/Assets/images/layer-forest.png";
 import layerHouse from "/src/Assets/images/layer-house.png";
@@ -7,7 +8,6 @@ import layerNoHouse from "/src/Assets/images/layer-nohouse.png";
 const background = document.createElement("div");
 background.classList.add("background");
 export function renderBackground(){  
-    console.log(layerClouds)
     for(let i=0;i<4;i++){
         const layerContainer = document.createElement("div");
         layerContainer.classList.add("layer-container");

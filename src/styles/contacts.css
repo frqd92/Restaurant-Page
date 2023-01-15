@@ -1,0 +1,54 @@
+.contact-div{
+    position: absolute;
+    border-radius: 2px;
+    transition: 0.3s all ease;
+    background-color: rgba(0, 0, 0, 0.105);
+    text-align: center;
+    padding: 15px;
+    top: 30%;
+    left: 70%;
+    width: fit-content;
+    white-space: nowrap;
+    transform: translate(-50%,-50%);
+}
+.contact-div p {
+    margin-bottom: 15px;
+    font-family: "playfair";
+    font-size: 1.2rem;
+    color: rgb(79, 75, 75);
+}
+.contact-link:hover {
+    background-color: rgba(1, 113, 5, 0.268);
+}
+.contact-link{
+    text-decoration: none;
+    font-family: "taviraj";
+    color: rgba(0, 0, 0, 0.788);
+    font-size: 1.5rem;
+    padding: 0px 12px;
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 1050px) {
+    .contact-div{
+        width: 100%;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .contact-div p {
+        font-size: calc(1.5vw + 0.5rem);
+      
+    }
+}
+@media screen and (max-height: 570px) {
+    .contact-div{
+        top: 60%;
+        background-color: rgba(0, 0, 0, 0.305);
+     
+    }
+    .contact-div p {
+
+        color: rgb(215, 208, 208);
+    }
+}

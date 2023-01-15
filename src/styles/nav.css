@@ -1,4 +1,3 @@
-
 nav{
     position: absolute;
     display: flex;
@@ -19,8 +18,8 @@ nav{
     width: 95%;
     height: fit-content;
     top: 10%;
-    left: -10%;
-    transform: translate(-10%, 10%);
+    left: -13%;
+    transform: translate(-13%, 10%);
     transition: 0.6s all ease;
 }
 
@@ -51,19 +50,39 @@ nav{
     flex-direction: column;
     align-self: center;
     text-align: center;
-    gap: 10px;
     font-family: "playfair";
     font-size: calc(1vw + 1rem);
     color: rgba(0, 0, 0, 0.583);
     text-shadow: 1px 2px 5px rgba(79, 30, 2, 0.49);
     gap: calc(10px + 1vw);
+
 }
-.nav-options p{
+.nav-options > p{
+    text-align: center;
+    max-width: fit-content;
     user-select: none;
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s linear;
 }
+
+.indicators{
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+    transition: 1s all ease;
+}
+
+.indicators p{
+    font-size: 1.5rem;
+    opacity: 0.3;
+    color: black;
+    padding-top: 2px;
+}
+
+
 
 .enter-btn{
     outline: none;
@@ -86,7 +105,6 @@ nav{
     height: 100vh;
 }
 
-
 @media screen and (max-width: 1050px) {
     .nav-enter{
         top: 12%;
@@ -96,9 +114,15 @@ nav{
     .title{
         text-align: center;
         white-space: nowrap;
+    
     }
     .nav-options{
         flex-direction: row;
         gap: calc(10px + 4vw)
+    }
+}
+@media screen and (max-height:570px ){
+    .nav-enter{
+      top: calc(15vh + 20px)
     }
 }

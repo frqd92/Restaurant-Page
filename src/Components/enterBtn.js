@@ -1,4 +1,5 @@
 
+import { makeHome } from "./renderElements/makeHome";
 export function enterSite(){
     const layerHouse = document.querySelector(".layer-house");
     const layerClouds = document.querySelector(".layer-clouds");
@@ -9,6 +10,7 @@ export function enterSite(){
     const navOptions = document.querySelector(".nav-options");
 
     document.querySelector(".enter-btn").style.opacity="0";
+    makeHome();
     setTimeout(()=>{
         nav.classList.add("nav-enter");
     },300);
@@ -34,4 +36,5 @@ export function enterSite(){
             menuItems[i].style.opacity="1";
         },200 + (200*i));
     }
+
 }
