@@ -87,3 +87,18 @@ nav{
 }
 
 
+@media screen and (max-width: 1050px) {
+    .nav-enter{
+        top: 12%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .title{
+        text-align: center;
+        white-space: nowrap;
+    }
+    .nav-options{
+        flex-direction: row;
+        gap: calc(10px + 4vw)
+    }
+}

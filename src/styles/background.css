@@ -32,3 +32,8 @@
 .layer-nohouse{
   
 }
+@media screen and (min-width: 1700px) {
+    .layer{
+        object-fit:fill;
+    }
+}

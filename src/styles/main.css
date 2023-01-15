@@ -9,7 +9,6 @@ background-color: rgb(17, 15, 46);
 }
 
 
-
 @font-face {
     font-family: "taviraj" ;
     src: url("/src/Assets/fonts/Taviraj-Medium.ttf");
@@ -23,24 +22,5 @@ background-color: rgb(17, 15, 46);
     src: url("/src/Assets/fonts/Tangerine.ttf");
 }
 
-@media screen and (max-width: 1050px) {
-    .nav-enter{
-        top: 12%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .title{
-        text-align: center;
-        white-space: nowrap;
-    }
-    .nav-options{
-        flex-direction: row;
-        gap: calc(10px + 4vw)
-    }
-}
 
-@media screen and (min-width: 1700px) {
-    .layer{
-        object-fit:fill;
-    }
-}
+
