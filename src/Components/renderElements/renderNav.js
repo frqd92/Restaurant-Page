@@ -13,7 +13,7 @@ export function renderNav(){
             p2.innerText="Home";
             break;
             case 1: 
-            p.innerText="ex natura ad laminam";
+            p.innerText="de natura ad laminam";
             p2.innerText="Menu";
             break;
             case 2:

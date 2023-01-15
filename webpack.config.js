@@ -13,7 +13,7 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i,
-                use: ["style-order", "css-loader"]
+                use: ["style-loader", "css-loader"],
             }
         ]
     },
