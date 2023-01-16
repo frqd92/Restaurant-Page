@@ -32,6 +32,8 @@ nav{
     letter-spacing: 0.3rem;
     align-items: center;
     font-family: "tangerine";
+    width: fit-content;
+
 }
 .title :nth-child(1){
 
@@ -73,13 +75,15 @@ nav{
     justify-content: space-between;
     user-select: none;
     transition: 1s all ease;
-}
+    
 
+}
 .indicators p{
     font-size: 1.5rem;
     opacity: 0.3;
     color: black;
     padding-top: 2px;
+
 }
 
 

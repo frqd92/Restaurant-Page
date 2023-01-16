@@ -1,7 +1,7 @@
 import '/src/styles/home.css';
 import { navIndicators } from './renderNav';
 
-export function makeHome(){
+export function makeHome(from){
     if(document.body.children.length===3){
         document.body.children[2].remove();
     }
@@ -28,5 +28,8 @@ export function makeHome(){
         }
         document.body.appendChild(aboutSection);    
     }
-    navIndicators("home")
+    if(!from){
+        navIndicators("home")
+    }
+ 
 }

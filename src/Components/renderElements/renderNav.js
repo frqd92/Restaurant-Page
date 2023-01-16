@@ -15,7 +15,7 @@ export function renderNav(){
             case 0: 
             p.innerText="The Hunter's Inn"; 
             p2.innerText="Home";
-            p2.addEventListener("click", makeHome);
+            p2.addEventListener("click", ()=>{makeHome(false)});
             break;
             case 1: 
             p.innerText="de natura ad laminam";
@@ -35,19 +35,18 @@ export function renderNav(){
     createIndicators(navOptions)
 };
 
-function createIndicators(container){
+export function createIndicators(container){
     const div = document.createElement("div");
-    const bgDiv = document.createElement("div");
     const right = document.createElement("p");
     const left = document.createElement("p");
     div.classList.add("indicators");
-    bgDiv.classList.add("bg-div")
     right.textContent="|";
     left.innerText="|";
     div.appendChild(right);
     div.appendChild(left);
-
     container.appendChild(div);
+    window.addEventListener("resize", windowResize)
+    
 }
 
 export function navIndicators(element){
@@ -60,33 +59,24 @@ export function navIndicators(element){
 
 function getPos(element){
     const [home, menu, contacts] = document.querySelectorAll(".nav-options > p");
-
+    const title = document.querySelector(".title > p")
+    console.log(title.offsetLeft)
     switch(element){
         case "home":
-        return [`${home.scrollWidth + 23}px`, [home.offsetTop, home.offsetLeft]];
+        return [`${home.scrollWidth + 25}px`, [home.offsetTop, home.offsetLeft]];
         case "menu":
-        return [`${menu.scrollWidth + 23}px`, [menu.offsetTop, menu.offsetLeft]];
+        return [`${menu.scrollWidth + 25}px`, [menu.offsetTop, menu.offsetLeft]];
         case "contacts":
-        return [`${contacts.scrollWidth + 23}px`,[contacts.offsetTop, contacts.offsetLeft] ];
+        return [`${contacts.scrollWidth + 25}px`,[contacts.offsetTop, contacts.offsetLeft] ];
+        case "title":
+        return [`${title.scrollWidth + 30}px`,[title.offsetTop + 10, title.offsetLeft]];
     }
 }
 
-
-// export function navArrows(element){
-//     const div = document.querySelector(".arrows");
-//     const [home, menu, contacts] = document.querySelectorAll(".nav-options > p");
-//     //console.log(home.offsetLeft, contacts.offsetLeft);
-//     console.log("shiii")
-//     switch(element){
-//         case "home":
-//         div.style.width = `${home.scrollWidth}px`;
-//         break;
-
-//         case "menu": 
-//         div.style.width =`${menu.offsetWidth}px`;
-//         break;
-
-//         case "contacts": 
-//         div.style.width = `${contacts.scrollWidth}px`;
-//     }
-// }
+function windowResize(){
+   switch(document.body.children[2].className){
+    case "about-section": navIndicators("home"); break;
+    case "menu-div": navIndicators("menu"); break;
+    case "contact-div": navIndicators("contacts");
+   }
+}
