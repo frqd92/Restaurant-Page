@@ -19,17 +19,24 @@
 
 .layer-forest{
     opacity: 0;
-}
-.layer-house{
-    opacity: 0;
-    z-index: -10000;
-    transition: opacity 0.3s ease;
+    display: none;
+    z-index: -2;
 
 }
 .layer-clouds{
     opacity: 0;
+    display: none;
+    z-index: -2;
 }
+.layer-house{
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1s ease;
+
+}
+
 .layer-nohouse{
+    z-index: -3;
   
 }
 @media screen and (min-width: 1700px) {

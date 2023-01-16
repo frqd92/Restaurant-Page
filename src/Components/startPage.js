@@ -6,10 +6,10 @@ export function startPage(){
     const navOptions = document.querySelector(".nav-options");
     const enterBtn = document.createElement("button");
     navOptions.style.display="none";
-    document.body.classList.add("body-enter")
+    document.body.classList.add("body-enter");
     nav.appendChild(enterBtn);
     enterBtn.innerText="Enter Inn";
-    enterBtn.classList.add("enter-btn")
-    enterBtn.addEventListener("click", enterSite)
-    navIndicators("title")
+    enterBtn.classList.add("enter-btn");
+    enterBtn.addEventListener("click", enterSite);
+    navIndicators("title");
 }

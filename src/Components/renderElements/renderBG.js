@@ -38,5 +38,5 @@ export function renderBackground(){
     }
     
     document.body.prepend(background);
-    
 }
+

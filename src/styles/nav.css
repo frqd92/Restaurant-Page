@@ -74,8 +74,8 @@ nav{
     display: flex;
     justify-content: space-between;
     user-select: none;
-    transition: 1s all ease;
-    
+ 
+    transition: 0.7s all ease;
 
 }
 .indicators p{

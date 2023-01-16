@@ -26,11 +26,7 @@ export function enterSite(){
     setTimeout(()=>{
         layerHouse.style.opacity="1";
     }, 1800);
-    setTimeout(()=>{
-        layerClouds.style.opacity="1";
-        layerForest.style.opacity="1";
-        layerNoHouse.style.opacity="0";
-    },1850);
+
     function itemAppear(i){
         setTimeout(()=>{
             menuItems[i].style.opacity="1";

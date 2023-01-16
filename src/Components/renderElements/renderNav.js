@@ -45,10 +45,8 @@ export function createIndicators(container){
     div.appendChild(right);
     div.appendChild(left);
     container.appendChild(div);
-    window.addEventListener("resize", windowResize)
-    
+    window.addEventListener("resize", windowResize, true)
 }
-
 export function navIndicators(element){
     const div = document.querySelector(".indicators");
     const [length, [yPos, xPos]] = getPos(element);
@@ -56,11 +54,9 @@ export function navIndicators(element){
     div.style.top = `${yPos}px`;
     div.style.left = `${xPos - 15}px`;
 }
-
 function getPos(element){
     const [home, menu, contacts] = document.querySelectorAll(".nav-options > p");
     const title = document.querySelector(".title > p")
-    console.log(title.offsetLeft)
     switch(element){
         case "home":
         return [`${home.scrollWidth + 25}px`, [home.offsetTop, home.offsetLeft]];
@@ -72,7 +68,6 @@ function getPos(element){
         return [`${title.scrollWidth + 30}px`,[title.offsetTop + 10, title.offsetLeft]];
     }
 }
-
 function windowResize(){
    switch(document.body.children[2].className){
     case "about-section": navIndicators("home"); break;

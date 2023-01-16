@@ -1,6 +1,5 @@
 import '/src/styles/contacts.css'
 import { navIndicators } from './renderNav';
-
 export function makeContacts(){
     if(document.body.children.length===3){
         document.body.children[2].remove();
@@ -18,7 +17,5 @@ export function makeContacts(){
     contactDiv.appendChild(link);
     document.body.appendChild(contactDiv);
     navIndicators("contacts")
-
-
 }
 
