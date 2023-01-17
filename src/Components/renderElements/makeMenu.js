@@ -16,8 +16,6 @@ import platter from '/src/Assets/images/meals/platter.png';
 
 
 
-
-
 export function makeMenu(){
     navIndicators("menu");
     if(document.body.children.length===3)document.body.children[2].remove();
@@ -47,21 +45,29 @@ function menuCont(){
     document.body.appendChild(menuDiv);
 
     buttonLeft.addEventListener("mouseover", ()=>{
+        buttonLeft.classList.add("menu-btn-hover-sky");
         layerClouds.classList.add("layer-clouds-select");
     })
     buttonLeft.addEventListener("mouseleave", ()=>{
+        buttonLeft.classList.remove("menu-btn-hover-sky");
         layerClouds.classList.remove("layer-clouds-select");
     })
     buttonRight.addEventListener("mouseover", ()=>{
+        buttonRight.classList.add("menu-btn-hover-forest");
         layerForest.classList.add("layer-forest-select");
     })
     buttonRight.addEventListener("mouseleave", ()=>{
+        buttonRight.classList.remove("menu-btn-hover-forest");
         layerForest.classList.remove("layer-forest-select");
     })
-    buttonLeft.addEventListener("click", ()=>{
+    buttonLeft.addEventListener("click", (e)=>{
+        buttonRight.style.background = 'none'
+        buttonLeft.style.background = 'rgba(19, 87, 170, 0.136)'
         generateMenuItems("sky", menuGrid);
     })
-    buttonRight.addEventListener("click", ()=>{
+    buttonRight.addEventListener("click", (e)=>{
+        buttonLeft.style.background = 'none'
+        buttonRight.style.background ='rgba(3, 65, 0, 0.136)';
         generateMenuItems("forest", menuGrid);
     })
     
@@ -71,7 +77,7 @@ function generateMenuItems(element, grid){
     grid.innerHTML = "";
     let meals;
     element==="sky"?meals = skyMeals:meals = forestMeals;
-    for(let i=0;i<4;i++){
+    for(let i=0;i<meals.length;i++){
         const layer = document.createElement("div");
         let name = document.createElement("p");
         let description = document.createElement("p");
@@ -89,9 +95,24 @@ function generateMenuItems(element, grid){
         layer.appendChild(description);
         layer.appendChild(img);
         grid.appendChild(layer)
+        layer.addEventListener("mouseover",()=>{
+            element==="sky"?layer.style.background='rgba(19, 87, 170, 0.136)':layer.style.background='rgba(3, 65, 0, 0.136)';
+            menuImg(img, layer)
+        });
+        layer.addEventListener("mouseleave", ()=>{
+            img.style.display="none";
+            layer.style.background="none";
+        })
+
     }
 }
+function menuImg(img, layer){
+    img.style.display="block";
+    layer.addEventListener("mousemove", (e)=>{
+        img.style.top= `${e.layerY + 100}px`;
+    })
 
+}
 
 const skyMeals = [
     [{
