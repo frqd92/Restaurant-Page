@@ -2,9 +2,6 @@ import { makeHome } from "./renderElements/makeHome";
 import { navIndicators } from "./renderElements/renderNav";
 export function enterSite(){
     const layerHouse = document.querySelector(".layer-house");
-    const layerClouds = document.querySelector(".layer-clouds");
-    const layerForest = document.querySelector(".layer-forest");
-    const layerNoHouse = document.querySelector(".layer-nohouse");
     const menuItems = document.querySelectorAll(".nav-options p");
     const nav = document.querySelector("nav");
     const navOptions = document.querySelector(".nav-options");
@@ -25,7 +22,7 @@ export function enterSite(){
     }, 600);
     setTimeout(()=>{
         layerHouse.style.opacity="1";
-    }, 1800);
+    }, 1000);
 
     function itemAppear(i){
         setTimeout(()=>{

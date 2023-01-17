@@ -16,6 +16,11 @@
     position: absolute;
 }
 
+.layer-house{
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1s ease;
+}
 
 .layer-forest{
     opacity: 0;
@@ -23,21 +28,22 @@
     z-index: -2;
 
 }
-.layer-clouds{
+.layer-container .layer-clouds{
     opacity: 0;
     display: none;
     z-index: -2;
-}
-.layer-house{
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 1s ease;
 
 }
 
+.layer-clouds-select{
+    filter: saturate(2) hue-rotate(310deg) ;
+}
+
+.layer-forest-select{
+    filter: saturate(3) hue-rotate(200deg)
+}
 .layer-nohouse{
     z-index: -3;
-  
 }
 @media screen and (min-width: 1700px) {
     .layer{

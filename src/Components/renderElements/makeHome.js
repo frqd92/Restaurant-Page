@@ -1,7 +1,8 @@
 import '/src/styles/home.css';
 import { navIndicators } from './renderNav';
-
+import { showHouse } from '../bgVisibility'
 export function makeHome(from){
+    showHouse(true);
     if(document.body.children.length===3){
         document.body.children[2].remove();
     }

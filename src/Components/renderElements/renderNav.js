@@ -45,7 +45,7 @@ export function createIndicators(container){
     div.appendChild(right);
     div.appendChild(left);
     container.appendChild(div);
-    window.addEventListener("resize", windowResize, true)
+    window.addEventListener("resize", windowResize)
 }
 export function navIndicators(element){
     const div = document.querySelector(".indicators");

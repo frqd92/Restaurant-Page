@@ -1,6 +1,9 @@
 import '/src/styles/contacts.css'
 import { navIndicators } from './renderNav';
+import { showHouse } from '../bgVisibility'
+
 export function makeContacts(){
+    showHouse(true);
     if(document.body.children.length===3){
         document.body.children[2].remove();
     }
