@@ -10,11 +10,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 10fr;
+    transition: 0.3s transform linear;
 }
-/* .menu-div-forest{
-    background-color: rgba(2, 46, 3, 0.335);
-} */
-
 .menu-btn{
     cursor: pointer;
     text-align: center;
@@ -25,11 +22,11 @@
     padding: 10px;
     color: rgba(0, 0, 0, 0.689);
     grid-row: 1 / 2;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.147);
+    border: 1px solid rgba(0, 0, 0, 0.137);
 }
 
 .menu-btn:nth-child(1){
-    border-right: 1px solid rgba(0, 0, 0, 0.147);
+  
     grid-column: 1 / 2;
     border-radius: 5px 0px 0px 0px;
 }
@@ -47,16 +44,16 @@
 .menu-btn-hover-sky{
     background-color: rgba(19, 87, 170, 0.275);
 
-
 }
 .menu-btn-hover-forest{
     background-color: rgba(3, 65, 0, 0.251);
 }
-
 .menu-layer{
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.272);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+    border-right: 1px solid rgba(0, 0, 0, 0.137);
+    border-left: 1px solid rgba(0, 0, 0, 0.137);
     align-items: center;
     justify-content: center;
     padding: calc(2vw) 0px;
@@ -67,27 +64,51 @@
     font-weight: bolder;
     text-shadow: 0px 0px 1px rgba(0, 0, 130, 0.458);
     margin-bottom: 5px;
+}
+.menu-name-forest{
+    text-shadow: 0px 0px 2px rgba(0, 205, 7, 0.254);
 
 }
 .menu-description{
     font-size: calc(0.4rem + 1vw);
     font-family: "karla";
-    text-shadow: 0px 0px 1px rgba(13, 139, 99, 0.358);
+    color: rgb(26, 28, 30);
+
   
 }
 .menu-img{
     position: absolute;
     width: 30%;
     display: none;
-    left: -50px;
+    transform: translate(-35vw, calc(70px + 2vw));
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+@media screen and (min-width:700px) {
 
+    .menu-img{
+        transform: translate(-35vw, 50px)
+    }
+}
 
 @media screen and (min-width:1050px) {
     .menu-div{
         width: 50%;
         transform: translate(-10%, -80%);
+    }
+    .menu-img{
+        transform: translate(-35vw, 200px)
+    }
+}
+
+@media screen and (min-width:1700px) {
+    .menu-img{
+        transform: translate(-35vw, 150px)
+    }
+}
+
+@media screen and (max-height:800px) {
+    .menu-img{
+        transform: translate(-38vw, 0px)
     }
 }

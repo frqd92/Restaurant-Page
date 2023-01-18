@@ -4,7 +4,6 @@ import layerForest from "/src/Assets/images/layer-forest.png";
 import layerHouse from "/src/Assets/images/layer-house.png";
 import layerNoHouse from "/src/Assets/images/layer-nohouse.png";
 
-
 const background = document.createElement("div");
 background.classList.add("background");
 export function renderBackground(){  

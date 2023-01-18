@@ -74,7 +74,6 @@ nav{
     display: flex;
     justify-content: space-between;
     user-select: none;
- 
     transition: 0.7s all ease;
 
 }
@@ -85,8 +84,6 @@ nav{
     padding-top: 2px;
 
 }
-
-
 
 .enter-btn{
     outline: none;

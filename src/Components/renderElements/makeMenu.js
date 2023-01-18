@@ -2,7 +2,7 @@ import { navIndicators } from './renderNav';
 import { showHouse } from '../bgVisibility';
 import '/src/styles/menu.css';
 import '/src/styles/background.css';
-import vultureBolognese from '/src/Assets/images/meals/vulture-bolognese.png';
+import vultureBolognese from "/src/Assets/images/meals/vulture-bolognese.png";
 import pigeonBurger from '/src/Assets/images/meals/pigeon-burger.png';
 import ostrichSoup from '/src/Assets/images/meals/ostrich-soup.png';
 import titSandwich from '/src/Assets/images/meals/tit-sandwich.png';
@@ -10,10 +10,6 @@ import bisonSteak from '/src/Assets/images/meals/bison-steak.png';
 import snakeSushi from '/src/Assets/images/meals/snake-sushi.png';
 import lasagna from '/src/Assets/images/meals/lasagna.png';
 import platter from '/src/Assets/images/meals/platter.png';
-
-
-
-
 
 
 export function makeMenu(){
@@ -84,6 +80,7 @@ function generateMenuItems(element, grid){
         let img = document.createElement("img");
         layer.classList.add("menu-layer");
         name.classList.add("menu-name");
+        if(element==="forest")name.classList.add("menu-name-forest");
         description.classList.add("menu-description");
         img.classList.add("menu-img");
         for(let [key, value] of Object.entries(meals[i])){
@@ -103,7 +100,7 @@ function generateMenuItems(element, grid){
             img.style.display="none";
             layer.style.background="none";
         })
-
+console.log("fart")
     }
 }
 function menuImg(img, layer){

@@ -26,8 +26,8 @@
     opacity: 0;
     display: none;
     z-index: -2;
-
 }
+
 .layer-container .layer-clouds{
     opacity: 0;
     display: none;
@@ -36,7 +36,8 @@
 }
 
 .layer-clouds-select{
-    filter: saturate(2) hue-rotate(310deg) ;
+    filter: saturate(2) hue-rotate(340deg) ;
+
 }
 
 .layer-forest-select{
@@ -45,6 +46,18 @@
 .layer-nohouse{
     z-index: -3;
 }
+
+
+
+@keyframes textGlow {
+    0%{
+        box-shadow: 0px 0px 0px ;
+    }
+}
+
+
+
+
 @media screen and (min-width: 1700px) {
     .layer{
         object-fit:fill;

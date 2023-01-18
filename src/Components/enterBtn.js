@@ -6,7 +6,7 @@ export function enterSite(){
     const nav = document.querySelector("nav");
     const navOptions = document.querySelector(".nav-options");
     document.querySelector(".enter-btn").style.opacity="0";
-    makeHome(true);
+    
 
     setTimeout(()=>{
         nav.classList.add("nav-enter");
@@ -23,11 +23,15 @@ export function enterSite(){
     setTimeout(()=>{
         layerHouse.style.opacity="1";
     }, 1000);
+    setTimeout(()=>{
+        makeHome(true);
+    }, 1500)
 
     function itemAppear(i){
         setTimeout(()=>{
             menuItems[i].style.opacity="1";
         },200 + (200*i));
     }
+
     setTimeout(()=>{navIndicators("title")}, 700)
 }
