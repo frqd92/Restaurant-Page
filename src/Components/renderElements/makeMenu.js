@@ -129,7 +129,7 @@ const skyMeals = [
     }],
     [{
         name: "Tit sandwich",
-        description: "Sandwich made from a pair of crested forest tits.",
+        description: "Sandwich made from a pair of forest tits.",
         img: titSandwich
     }]
 ];
